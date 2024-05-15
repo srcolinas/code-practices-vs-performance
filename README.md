@@ -13,3 +13,7 @@ Here we keep track of what practices are being analized and in which language. F
 | Polymorphism vs if statements  | | | |  |
 | Knowing the internals   | | | |  |
 | Size of functions   | | | |  |
+
+
+## Other references
+* https://www.youtube.com/watch?v=GA4ONupSl8Y
