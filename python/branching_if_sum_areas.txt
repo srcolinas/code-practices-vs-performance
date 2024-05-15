@@ -1,0 +1,62 @@
+ 12           0 RESUME                   0
+
+ 13           2 LOAD_CONST               1 (0)
+              4 STORE_FAST               1 (total)
+
+ 14           6 LOAD_FAST                0 (requests)
+              8 GET_ITER
+        >>   10 FOR_ITER                68 (to 150)
+             14 UNPACK_SEQUENCE          3
+             18 STORE_FAST               2 (shape)
+             20 STORE_FAST               3 (a)
+             22 STORE_FAST               4 (b)
+
+ 15          24 LOAD_FAST                2 (shape)
+             26 LOAD_CONST               2 ('trianlge')
+             28 COMPARE_OP              40 (==)
+             32 POP_JUMP_IF_FALSE       12 (to 58)
+
+ 16          34 LOAD_FAST                1 (total)
+             36 LOAD_FAST                3 (a)
+             38 LOAD_FAST                4 (b)
+             40 BINARY_OP                5 (*)
+             44 LOAD_CONST               3 (2)
+             46 BINARY_OP               11 (/)
+             50 BINARY_OP               13 (+=)
+             54 STORE_FAST               1 (total)
+             56 JUMP_BACKWARD           24 (to 10)
+
+ 17     >>   58 LOAD_FAST                2 (shape)
+             60 LOAD_CONST               4 ('circle')
+             62 COMPARE_OP              40 (==)
+             66 POP_JUMP_IF_FALSE       26 (to 120)
+
+ 18          68 LOAD_FAST                1 (total)
+             70 LOAD_GLOBAL              0 (math)
+             80 LOAD_ATTR                2 (pi)
+            100 LOAD_FAST                3 (a)
+            102 BINARY_OP                5 (*)
+            106 LOAD_FAST                4 (b)
+            108 BINARY_OP                5 (*)
+            112 BINARY_OP               13 (+=)
+            116 STORE_FAST               1 (total)
+            118 JUMP_BACKWARD           55 (to 10)
+
+ 19     >>  120 LOAD_FAST                2 (shape)
+            122 LOAD_CONST               5 ('square')
+            124 COMPARE_OP              40 (==)
+            128 POP_JUMP_IF_TRUE         1 (to 132)
+            130 JUMP_BACKWARD           61 (to 10)
+
+ 20     >>  132 LOAD_FAST                1 (total)
+            134 LOAD_FAST                3 (a)
+            136 LOAD_FAST                4 (b)
+            138 BINARY_OP                5 (*)
+            142 BINARY_OP               13 (+=)
+            146 STORE_FAST               1 (total)
+            148 JUMP_BACKWARD           70 (to 10)
+
+ 14     >>  150 END_FOR
+
+ 21         152 LOAD_FAST                1 (total)
+            154 RETURN_VALUE

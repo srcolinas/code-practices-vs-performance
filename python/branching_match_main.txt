@@ -1,0 +1,14 @@
+ 25           0 RESUME                   0
+
+ 26           2 BUILD_LIST               0
+              4 LOAD_CONST               1 ((('triangle', 3, 4), ('circle', 5, 5), ('square', 5, 5)))
+              6 LIST_EXTEND              1
+              8 LOAD_CONST               2 (1000000)
+             10 BINARY_OP                5 (*)
+             14 STORE_FAST               0 (shapes)
+
+ 27          16 LOAD_GLOBAL              1 (NULL + sum_areas)
+             26 LOAD_FAST                0 (shapes)
+             28 CALL                     1
+             36 POP_TOP
+             38 RETURN_CONST             0 (None)

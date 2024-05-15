@@ -1,0 +1,22 @@
+ 39           0 RESUME                   0
+
+ 40           2 LOAD_CONST               1 (0)
+              4 STORE_FAST               1 (total)
+
+ 41           6 LOAD_FAST                0 (shapes)
+              8 GET_ITER
+        >>   10 FOR_ITER                21 (to 56)
+             14 STORE_FAST               2 (s)
+
+ 42          16 LOAD_FAST                1 (total)
+             18 LOAD_FAST                2 (s)
+             20 LOAD_ATTR                1 (NULL|self + area)
+             40 CALL                     0
+             48 BINARY_OP               13 (+=)
+             52 STORE_FAST               1 (total)
+             54 JUMP_BACKWARD           23 (to 10)
+
+ 41     >>   56 END_FOR
+
+ 43          58 LOAD_FAST                1 (total)
+             60 RETURN_VALUE

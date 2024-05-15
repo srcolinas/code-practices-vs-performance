@@ -1,0 +1,68 @@
+ 24           0 RESUME                   0
+
+ 25           2 LOAD_CONST               1 (0)
+              4 STORE_FAST               1 (total)
+
+ 26           6 LOAD_FAST                0 (shapes)
+              8 GET_ITER
+        >>   10 FOR_ITER               157 (to 328)
+             14 STORE_FAST               2 (s)
+
+ 27          16 LOAD_GLOBAL              1 (NULL + isinstance)
+             26 LOAD_FAST                2 (s)
+             28 LOAD_GLOBAL              2 (Triangle)
+             38 CALL                     2
+             46 POP_JUMP_IF_FALSE       32 (to 112)
+
+ 28          48 LOAD_FAST                1 (total)
+             50 LOAD_FAST                2 (s)
+             52 LOAD_ATTR                4 (base)
+             72 LOAD_FAST                2 (s)
+             74 LOAD_ATTR                6 (height)
+             94 BINARY_OP                5 (*)
+             98 LOAD_CONST               2 (2)
+            100 BINARY_OP               11 (/)
+            104 BINARY_OP               13 (+=)
+            108 STORE_FAST               1 (total)
+            110 JUMP_BACKWARD           51 (to 10)
+
+ 29     >>  112 LOAD_GLOBAL              1 (NULL + isinstance)
+            122 LOAD_FAST                2 (s)
+            124 LOAD_GLOBAL              8 (Square)
+            134 CALL                     2
+            142 POP_JUMP_IF_FALSE       29 (to 202)
+
+ 30         144 LOAD_FAST                1 (total)
+            146 LOAD_FAST                2 (s)
+            148 LOAD_ATTR               10 (side)
+            168 LOAD_FAST                2 (s)
+            170 LOAD_ATTR               10 (side)
+            190 BINARY_OP                5 (*)
+            194 BINARY_OP               13 (+=)
+            198 STORE_FAST               1 (total)
+            200 JUMP_BACKWARD           96 (to 10)
+
+ 31     >>  202 LOAD_GLOBAL              1 (NULL + isinstance)
+            212 LOAD_FAST                2 (s)
+            214 LOAD_GLOBAL             12 (Circle)
+            224 CALL                     2
+            232 POP_JUMP_IF_TRUE         1 (to 236)
+            234 JUMP_BACKWARD          113 (to 10)
+
+ 32     >>  236 LOAD_FAST                1 (total)
+            238 LOAD_FAST                2 (s)
+            240 LOAD_ATTR               14 (radious)
+            260 LOAD_FAST                2 (s)
+            262 LOAD_ATTR               14 (radious)
+            282 BINARY_OP                5 (*)
+            286 LOAD_GLOBAL             16 (math)
+            296 LOAD_ATTR               18 (pi)
+            316 BINARY_OP                5 (*)
+            320 BINARY_OP               13 (+=)
+            324 STORE_FAST               1 (total)
+            326 JUMP_BACKWARD          159 (to 10)
+
+ 26     >>  328 END_FOR
+
+ 33         330 LOAD_FAST                1 (total)
+            332 RETURN_VALUE

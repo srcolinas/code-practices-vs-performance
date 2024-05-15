@@ -1,0 +1,31 @@
+ 40           0 RESUME                   0
+
+ 41           2 LOAD_GLOBAL              1 (NULL + sum)
+             12 LOAD_CONST               1 (<code object <genexpr> at 0x10d391330, file "/Users/sebastian/code-practices-vs-performance/python/polymorphism_vs_conditionals/polymorphic_abc.py", line 41>)
+             14 MAKE_FUNCTION            0
+             16 LOAD_FAST                0 (shapes)
+             18 GET_ITER
+             20 CALL                     0
+             28 CALL                     1
+             36 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x10d391330, file "/Users/sebastian/code-practices-vs-performance/python/polymorphism_vs_conditionals/polymorphic_abc.py", line 41>:
+ 41           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                20 (to 52)
+             12 STORE_FAST               1 (s)
+             14 LOAD_FAST                1 (s)
+             16 LOAD_ATTR                1 (NULL|self + area)
+             36 CALL                     0
+             44 YIELD_VALUE              1
+             46 RESUME                   1
+             48 POP_TOP
+             50 JUMP_BACKWARD           22 (to 8)
+        >>   52 END_FOR
+             54 RETURN_CONST             0 (None)
+        >>   56 CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+             58 RERAISE                  1
+ExceptionTable:
+  4 to 54 -> 56 [0] lasti

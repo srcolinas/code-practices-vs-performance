@@ -1,0 +1,65 @@
+ 12           0 RESUME                   0
+
+ 13           2 LOAD_CONST               1 (0)
+              4 STORE_FAST               1 (total)
+
+ 14           6 LOAD_FAST                0 (requests)
+              8 GET_ITER
+        >>   10 FOR_ITER                70 (to 154)
+             14 UNPACK_SEQUENCE          3
+             18 STORE_FAST               2 (shape)
+             20 STORE_FAST               3 (a)
+             22 STORE_FAST               4 (b)
+
+ 15          24 LOAD_FAST                2 (shape)
+
+ 16          26 COPY                     1
+             28 LOAD_CONST               2 ('triangle')
+             30 COMPARE_OP              40 (==)
+             34 POP_JUMP_IF_FALSE       13 (to 62)
+             36 POP_TOP
+
+ 17          38 LOAD_FAST                1 (total)
+             40 LOAD_FAST                3 (a)
+             42 LOAD_FAST                4 (b)
+             44 BINARY_OP                5 (*)
+             48 LOAD_CONST               3 (2)
+             50 BINARY_OP               11 (/)
+             54 BINARY_OP               13 (+=)
+             58 STORE_FAST               1 (total)
+             60 JUMP_BACKWARD           26 (to 10)
+
+ 18     >>   62 COPY                     1
+             64 LOAD_CONST               4 ('circle')
+             66 COMPARE_OP              40 (==)
+             70 POP_JUMP_IF_FALSE       27 (to 126)
+             72 POP_TOP
+
+ 19          74 LOAD_FAST                1 (total)
+             76 LOAD_GLOBAL              0 (math)
+             86 LOAD_ATTR                2 (pi)
+            106 LOAD_FAST                3 (a)
+            108 BINARY_OP                5 (*)
+            112 LOAD_FAST                4 (b)
+            114 BINARY_OP                5 (*)
+            118 BINARY_OP               13 (+=)
+            122 STORE_FAST               1 (total)
+            124 JUMP_BACKWARD           58 (to 10)
+
+ 20     >>  126 LOAD_CONST               5 ('square')
+            128 COMPARE_OP              40 (==)
+            132 POP_JUMP_IF_TRUE         1 (to 136)
+            134 JUMP_BACKWARD           63 (to 10)
+
+ 21     >>  136 LOAD_FAST                1 (total)
+            138 LOAD_FAST                3 (a)
+            140 LOAD_FAST                4 (b)
+            142 BINARY_OP                5 (*)
+            146 BINARY_OP               13 (+=)
+            150 STORE_FAST               1 (total)
+            152 JUMP_BACKWARD           72 (to 10)
+
+ 14     >>  154 END_FOR
+
+ 22         156 LOAD_FAST                1 (total)
+            158 RETURN_VALUE
